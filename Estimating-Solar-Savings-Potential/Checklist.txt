@@ -1,0 +1,4 @@
+#Image segmentation (Rooftop)
+Downloading AIRS dataset
+Researching Image segmentation using AWS
+Check Object Detection Algorithm in AWS later

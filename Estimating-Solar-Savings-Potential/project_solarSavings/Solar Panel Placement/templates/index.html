@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Engery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body{
+            /* background-color: indianred; */
+            background-image: url('../static/images/img1.jpg');
+            background-size: cover;
+        }
+        form {
+            background-color: white;
+            margin: 8.5%;
+            padding:4%;
+            box-shadow: 7px 0px 10px 5px lightgrey;
+        }
+        label{
+            font-weight: bold;
+        }
+        .button{
+            /* display: block; */
+            margin:20px auto;
+            
+        }
+        h2{
+            padding: 10px;
+            font-size: 25px;
+            text-align: center;
+            margin: 5px auto;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <form action="http://localhost:5000/result" method="POST">
+        <div class="row">
+            <h2>ESTIMATE SOLAR ENERGY SAVINGS POTENTIAL</h2>
+        </div>
+        <div class="form-group row">
+            <label for="imagepath" class="col-sm-2 col-form-label" >Image Input: </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  name="imagepath">
+            </div>
+        </div>
+        <p style="font-weight: bold;">(OR)</p>
+        <div class="form-group row">
+            <label for="area" class="col-sm-2 col-form-label">Area in Sq.ft: </label>
+            <div class="col-sm-10">
+                <input type="text"  class="form-control" name="area"><br />
+            </div>
+            
+        </div>
+        <div class="form-group row">
+            <label for="avg" class="col-sm-2 col-form-label">Approx. Cost Per Unit: </label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="avg">
+                </div>
+        </div>
+        <div class="row">
+          <input type="submit" class="btn btn-primary mb-2 button">
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
